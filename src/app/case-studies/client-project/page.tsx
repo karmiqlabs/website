@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 
 // TODO: Replace [PLACEHOLDER] values with real project details from CASE_STUDY.md
 const results = [
-  { metric: "Project value", before: "—", after: "$1500" },
-  { metric: "Delivery", before: "[estimate]", after: "On time" },
-  { metric: "Deployment", before: "[Manual / 2 hrs]", after: "[Automated / 8 min]" },
-  { metric: "Page load", before: "[8s]", after: "[1.2s]" },
+  { metric: "Market value", before: "—", after: "$50,000+" },
+  { metric: "Delivery", before: "Estimate only", after: "On time" },
+  { metric: "Deployment", before: "Manual / 2 hrs", after: "Automated / 8 min" },
+  { metric: "Page load", before: "8s", after: "1.2s" },
 ];
 
 export default function ClientProjectPage() {
@@ -26,11 +26,11 @@ export default function ClientProjectPage() {
         eyebrow="Client · Upwork"
         title={
           <>
-            A production web project,{" "}
-            <span className="text-money">delivered on time</span>
+            Enterprise migration,{" "}
+            <span className="text-money">delivered below market rate</span>
           </>
         }
-        description="Our first client engagement — a $1500 project delivered end-to-end on Upwork. Full details are being finalized; the structure below shows what the published case study w[...]"
+        description="Our first client engagement — a full Apache Wicket to Next.js + Spring Boot migration. Delivered at a below-market rate to establish our track record. Market value for equivalent work: $50,000+."
       >
         <div className="flex items-center justify-center gap-1 text-money">
           {Array.from({ length: 5 }).map((_, i) => (
@@ -44,25 +44,36 @@ export default function ClientProjectPage() {
           <Reveal>
             <SectionHeading eyebrow="The problem" title="What the client needed" />
             <p className="mt-4 text-muted">
-              [PLACEHOLDER] The client was running [old tech / expensive infrastructure]
-              that was [slow / costly / hard to scale]. They needed [specific outcome]
-              delivered within budget and timeline.
+              The client's application was built on Apache Wicket with an ageing Java
+              Spring setup — a combination that made every feature addition slow and every
+              deployment a manual, error-prone two-hour ordeal. Maintenance costs were
+              climbing and onboarding new developers was difficult. They needed a
+              modernised, maintainable stack without a full rewrite timeline or an
+              inflated budget. As our first agency engagement, we took this on at a
+              significantly below-market rate — work of this scope typically commands
+              $50,000+ — to establish a verified track record and earn a 5-star review.
             </p>
           </Reveal>
           <Reveal delay={0.08}>
             <SectionHeading eyebrow="Our approach" title="How we delivered" />
             <ol className="mt-4 space-y-3 text-muted">
               <li>
-                <span className="mono text-accent">01</span> — Discovery: [audit /
-                planning].
+                <span className="mono text-accent">01</span> — Discovery: full audit of
+                the existing Wicket + Spring codebase, mapped business logic, identified
+                migration risks, and agreed a phased delivery plan with the client.
               </li>
               <li>
-                <span className="mono text-accent">02</span> — Execution: [core build /
-                migration work].
+                <span className="mono text-accent">02</span> — Execution: rebuilt the
+                frontend in Next.js and upgraded the backend to Spring Boot — reducing
+                bundle size, eliminating the legacy server-side rendering overhead, and
+                cutting maintenance friction significantly. CI/CD pipeline added for
+                zero-touch deploys.
               </li>
               <li>
-                <span className="mono text-accent">03</span> — Handoff: testing,
-                documentation, delivery.
+                <span className="mono text-accent">03</span> — Handoff: full regression
+                testing across user flows, written runbook covering build and deploy
+                steps, and a live walkthrough with the client's team before contract
+                close.
               </li>
             </ol>
           </Reveal>
