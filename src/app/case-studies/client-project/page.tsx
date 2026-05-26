@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 // TODO: Replace [PLACEHOLDER] values with real project details from CASE_STUDY.md
 const results = [
-  { metric: "Project value", before: "—", after: "₹80,000" },
+  { metric: "Project value", before: "—", after: "$1500" },
   { metric: "Delivery", before: "[estimate]", after: "On time" },
   { metric: "Deployment", before: "[Manual / 2 hrs]", after: "[Automated / 8 min]" },
   { metric: "Page load", before: "[8s]", after: "[1.2s]" },
@@ -30,7 +30,7 @@ export default function ClientProjectPage() {
             <span className="text-money">delivered on time</span>
           </>
         }
-        description="Our first client engagement — a ₹80,000 project delivered end-to-end on Upwork. Full details are being finalized; the structure below shows what the published case study will contain."
+        description="Our first client engagement — a $1500 project delivered end-to-end on Upwork. Full details are being finalized; the structure below shows what the published case study w[...]"
       >
         <div className="flex items-center justify-center gap-1 text-money">
           {Array.from({ length: 5 }).map((_, i) => (

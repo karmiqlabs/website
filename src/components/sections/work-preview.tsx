@@ -32,11 +32,11 @@ export function WorkPreview() {
               Delivered a production web project, on time and on budget
             </h3>
             <p className="mt-3 text-muted">
-              A ₹80,000 engagement delivered end-to-end. Full case study with the
+              A $1500 engagement delivered end-to-end. Full case study with the
               technical approach and results.
             </p>
             <div className="mt-auto flex flex-wrap items-center gap-4 pt-7">
-              <Metric value="₹80K" label="project value" />
+              <Metric value="$1.5K" label="project value" />
               <Metric value="100%" label="on-time" />
               <div className="flex items-center gap-1 text-money">
                 {Array.from({ length: 5 }).map((_, i) => (
