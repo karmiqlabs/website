@@ -1,0 +1,36 @@
+
+> website@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.4:3000
+✓ Ready in 1190ms
+
+○ Compiling / ...
+ GET / 200 in 5.9s (next.js: 5.2s, application-code: 743ms)
+ GET /services/cloudshift 200 in 711ms (next.js: 527ms, application-code: 184ms)
+ GET /services/stackevolve 200 in 750ms (next.js: 512ms, application-code: 238ms)
+ GET /case-studies/open-source 200 in 644ms (next.js: 507ms, application-code: 138ms)
+ GET /case-studies/client-project 200 in 553ms (next.js: 446ms, application-code: 108ms)
+ GET /about 200 in 710ms (next.js: 554ms, application-code: 156ms)
+ GET /contact 200 in 1464ms (next.js: 1297ms, application-code: 167ms)
+ GET /sitemap.xml 200 in 366ms (next.js: 348ms, application-code: 18ms)
+ GET /robots.txt 200 in 329ms (next.js: 322ms, application-code: 7ms)
+[contact] new submission (no RESEND_API_KEY set): {
+  name: 'Test User',
+  email: 'test@example.com',
+  message: 'Testing the contact endpoint end to end.'
+}
+ POST /api/contact 200 in 640ms (next.js: 614ms, application-code: 25ms)
+ POST /api/contact 422 in 9ms (next.js: 3ms, application-code: 7ms)
+ GET / 200 in 188ms (next.js: 6ms, application-code: 182ms)
+ GET / 200 in 171ms (next.js: 3ms, application-code: 168ms)
+ GET / 200 in 200ms (next.js: 3ms, application-code: 197ms)
+ GET / 200 in 530ms (next.js: 35ms, application-code: 495ms)
+ GET / 200 in 38ms (next.js: 12ms, application-code: 26ms)
+ GET / 200 in 34ms (next.js: 10ms, application-code: 25ms)
+ GET /case-studies/client-project 200 in 300ms (next.js: 11ms, application-code: 289ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET /contact 200 in 154ms (next.js: 11ms, application-code: 143ms)
+ GET /about 200 in 75ms (next.js: 7ms, application-code: 67ms)

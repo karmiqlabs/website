@@ -1,26 +1,228 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Class-based dark mode driven by next-themes (attribute="class") */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* ---------------------------------------------------------------- */
+/* Design tokens — mapped so utilities like bg-bg, text-fg, etc.    */
+/* resolve to CSS variables that flip between light & dark themes.  */
+/* ---------------------------------------------------------------- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+  --color-money: var(--money);
+  --color-money-soft: var(--money-soft);
+  --color-warn: var(--warn);
+  --color-ring: var(--ring);
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.25rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------------- LIGHT (default) ---------------- */
+:root {
+  --bg: #f5f6fb;
+  --bg-soft: #eceef6;
+  --surface: #ffffff;
+  --surface-2: #f8f9fd;
+  --fg: #0b1020;
+  --muted: #515b72;
+  --faint: #8a94a8;
+  --border: #e3e6f0;
+  --border-strong: #ced3e2;
+  --accent: #4f46e5;
+  --accent-soft: #eaeafe;
+  --accent-fg: #ffffff;
+  --money: #059669;
+  --money-soft: #d9f5e9;
+  --warn: #d97706;
+  --ring: rgba(79, 70, 229, 0.35);
+
+  --grid-line: rgba(11, 16, 32, 0.045);
+  --glow-1: rgba(79, 70, 229, 0.18);
+  --glow-2: rgba(5, 150, 105, 0.12);
+}
+
+/* ---------------- DARK ---------------- */
+.dark {
+  --bg: #070a12;
+  --bg-soft: #0a0e1a;
+  --surface: #0e1422;
+  --surface-2: #131a2b;
+  --fg: #e8edf7;
+  --muted: #94a0b8;
+  --faint: #5f6b82;
+  --border: #1b2336;
+  --border-strong: #28324a;
+  --accent: #818cf8;
+  --accent-soft: rgba(129, 140, 248, 0.14);
+  --accent-fg: #0a0e1a;
+  --money: #34d399;
+  --money-soft: rgba(52, 211, 153, 0.14);
+  --warn: #fbbf24;
+  --ring: rgba(129, 140, 248, 0.45);
+
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --glow-1: rgba(99, 102, 241, 0.25);
+  --glow-2: rgba(16, 185, 129, 0.16);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+  /* Reduce theme-flip flash on color transitions for interactive elements */
+  a, button {
+    transition: color 0.18s ease, background-color 0.18s ease,
+      border-color 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Engineered grid background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .bg-dots {
+    background-image: radial-gradient(var(--grid-line) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  /* Atmospheric glow blobs */
+  .glow-mesh::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(40rem 28rem at 18% -8%, var(--glow-1), transparent 70%),
+      radial-gradient(34rem 24rem at 88% 12%, var(--glow-2), transparent 70%);
+  }
+  .text-gradient {
+    background: linear-gradient(120deg, var(--fg) 30%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .mono {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum";
+  }
+  /* Fade mask for marquees / edges */
+  .mask-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+  .card-hover {
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+  }
+}
+
+/* Form fields */
+.field {
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.95rem;
+  color: var(--fg);
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.field::placeholder {
+  color: var(--faint);
+}
+.field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+/* ROI range slider */
+.roi-range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border-strong);
+  outline: none;
+  cursor: pointer;
+}
+.roi-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--accent), 0 4px 12px -2px var(--ring);
+  transition: transform 0.15s ease;
+}
+.roi-range::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+.roi-range::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  cursor: pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--faint);
 }
