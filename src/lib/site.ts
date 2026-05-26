@@ -5,7 +5,7 @@ export const site = {
   tagline: "Cut cloud costs. Kill tech debt.",
   description:
     "KarmiqLabs migrates infrastructure from AWS to cost-optimized providers and rebuilds legacy PHP, Java, and .NET stacks into modern architectures. India-based engineers, global quality, zero downtime.",
-  email: "ravitheja4531@gmail.com",
+  email: "aj@karmiqlabs.com",
   location: "India · serving clients worldwide",
   socials: {
     linkedin: "https://www.linkedin.com/company/karmiqlabs",
