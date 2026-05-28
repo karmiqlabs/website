@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -86,6 +87,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
