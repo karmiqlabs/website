@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 const proof = [
   "1 client delivered",
-  "₹80,000 project shipped",
+  "$10,000 project shipped",
   "100% on-time delivery",
 ];
 
