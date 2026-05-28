@@ -79,7 +79,7 @@ export default function RootLayout({
       <body className="min-h-dvh flex flex-col antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >
