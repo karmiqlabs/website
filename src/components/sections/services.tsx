@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, CloudCog, Layers } from "lucide-react";
+import { ArrowUpRight, CloudCog, Layers, Wallet } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 
@@ -22,6 +22,15 @@ const services = [
     points: ["PHP / Java / .NET → modern frameworks", "API-first re-architecture", "AI-assisted code translation"],
     price: "from $3,000",
   },
+  {
+    icon: Wallet,
+    tag: "Payroll & HR Tech",
+    name: "PaySync",
+    href: "/services/payroll",
+    desc: "Full-stack payroll platform built in Go + Next.js. Biometric attendance via ESSL, automated compliance, and one-click bank payments.",
+    points: ["ESSL biometric attendance sync", "Automated PF / ESI / TDS compliance", "Direct bank salary disbursement"],
+    price: "3 months free · then from ₹2,999/mo",
+  },
 ];
 
 export function Services() {
@@ -30,12 +39,12 @@ export function Services() {
       <Reveal>
         <SectionHeading
           eyebrow="What we do"
-          title="Two focused services. Measurable results."
-          description="We don't do everything. We do the two highest-impact moves a tech company can make — exceptionally well."
+          title="Three focused products. Measurable results."
+          description="We don't do everything. We build and ship the highest-impact solutions for cloud infrastructure, legacy modernization, and payroll automation — exceptionally well."
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-2">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s, i) => (
           <Reveal key={s.name} delay={i * 0.08}>
             <Link

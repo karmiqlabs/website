@@ -19,7 +19,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const interests = ["Cloud Migration", "Legacy Modernization", "Both", "Not sure"];
+const interests = ["Cloud Migration", "Legacy Modernization", "Payroll / HR Tech (PaySync)", "Multiple Products", "Not sure"];
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
