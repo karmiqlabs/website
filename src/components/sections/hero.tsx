@@ -28,7 +28,7 @@ export function Hero() {
           >
             <Badge tone="accent">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Cloud cost &amp; legacy modernization · India
+              Cloud · Legacy Modernization · Payroll &amp; HR Tech · India
             </Badge>
           </motion.div>
 
@@ -44,7 +44,7 @@ export function Hero() {
             Kill your{" "}
             <span className="text-gradient">tech debt</span>.
             <br />
-            Ship faster.
+            Automate payroll.
           </motion.h1>
 
           <motion.p
@@ -53,10 +53,10 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.14, ease }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-muted"
           >
-            We migrate infrastructure off AWS, GCP, and Azure to cost-optimized
-            providers like Hetzner and Linode — and rebuild legacy PHP, Java, and
-            .NET codebases into modern stacks. Zero downtime. AI-accelerated
-            delivery.
+            We migrate infrastructure off AWS to cost-optimized providers, rebuild
+            legacy PHP, Java, and .NET codebases into modern stacks, and automate
+            payroll with biometric attendance and one-click salary payments. Zero
+            downtime. AI-accelerated delivery.
           </motion.p>
 
           <motion.div

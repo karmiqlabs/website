@@ -2,7 +2,7 @@ export const site = {
   name: "KarmiqLabs",
   domain: "karmiqlabs.in",
   url: "https://karmiqlabs.in",
-  tagline: "Cut cloud costs. Kill tech debt.",
+  tagline: "Cut cloud costs. Kill tech debt. Automate payroll.",
   description:
     "KarmiqLabs migrates infrastructure from AWS to cost-optimized providers and rebuilds legacy PHP, Java, and .NET stacks into modern architectures. India-based engineers, global quality, zero downtime.",
   email: "aj@karmiqlabs.com",

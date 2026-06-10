@@ -1,4 +1,4 @@
-import { Cloud, Code2, TrendingUp } from "lucide-react";
+import { Cloud, Code2, Receipt, TrendingUp } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Reveal } from "@/components/ui/reveal";
@@ -18,6 +18,13 @@ const pains = [
     stat: "$1.5T",
     statLabel: "in global transactions still run on COBOL daily",
   },
+  {
+    icon: Receipt,
+    title: "Your HR team recalculates payroll by hand every month.",
+    body: "Manual attendance sheets, Excel salary workings, and missed compliance deadlines cost companies thousands per month. Biometric devices sit idle while your team re-enters data and prays nothing breaks before payday.",
+    stat: "40%",
+    statLabel: "of payroll errors go undetected until an audit or employee complaint",
+  },
 ];
 
 export function PainPoints() {
@@ -26,12 +33,12 @@ export function PainPoints() {
       <Reveal>
         <SectionHeading
           eyebrow="The problem"
-          title="Two problems silently killing your growth"
-          description="Most mid-market tech companies are bleeding money in two places at once. We fix both."
+          title="Three problems silently killing your growth"
+          description="Most mid-market companies are bleeding money in three places at once. We fix all three."
         />
       </Reveal>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {pains.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.08}>
             <Card hover className="h-full">
