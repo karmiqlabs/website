@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "legacy modernization",
     "PHP to Laravel migration",
     "cloud repatriation",
-    "India software services",
+    "payroll automation software",
   ],
   authors: [{ name: site.name }],
   openGraph: {
@@ -63,7 +63,7 @@ const orgSchema = {
   name: site.name,
   url: site.url,
   description: site.description,
-  address: { "@type": "PostalAddress", addressCountry: "IN" },
+  areaServed: ["IN", "AE", "GB", "DE", "US"],
   sameAs: [site.socials.linkedin, site.socials.github],
 };
 

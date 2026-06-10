@@ -9,6 +9,7 @@ const columns = [
     links: [
       { label: "CloudShift — Migration", href: "/services/cloudshift" },
       { label: "StackEvolve — Modernization", href: "/services/stackevolve" },
+      { label: "PaySync — Payroll & HR", href: "/services/payroll" },
       { label: "ROI Calculator", href: "/#roi" },
     ],
   },
@@ -88,7 +89,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-faint sm:flex-row sm:px-6 lg:px-8">
-          <span>© {new Date().getFullYear()} {site.name}. Built in India, serving the world.</span>
+          <span>© {new Date().getFullYear()} {site.name}. Built with precision, serving clients worldwide.</span>
           <span className="mono">Zero-downtime migrations · Senior-only delivery</span>
         </div>
       </div>

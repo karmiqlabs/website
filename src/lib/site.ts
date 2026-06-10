@@ -4,9 +4,9 @@ export const site = {
   url: "https://karmiqlabs.in",
   tagline: "Cut cloud costs. Kill tech debt. Automate payroll.",
   description:
-    "KarmiqLabs migrates infrastructure from AWS to cost-optimized providers and rebuilds legacy PHP, Java, and .NET stacks into modern architectures. India-based engineers, global quality, zero downtime.",
+    "KarmiqLabs migrates infrastructure from AWS to cost-optimized providers, rebuilds legacy PHP, Java, and .NET stacks into modern architectures, and automates payroll with biometric attendance. Senior engineers, global quality, zero downtime.",
   email: "aj@karmiqlabs.com",
-  location: "India · serving clients worldwide",
+  location: "Serving clients worldwide",
   socials: {
     linkedin: "https://www.linkedin.com/company/karmiqlabs",
     github: "https://github.com/karmiqlabs",

@@ -95,8 +95,8 @@ const faqs: QA[] = [
     a: "We support all ESSL models (eTimeTrackLite, IClock, etc.), FingerTec, ZKTeco, and any device that exposes a TCP/IP push SDK or ADMS protocol. We can also add support for new device brands within 2–3 weeks.",
   },
   {
-    q: "Is the data stored in India?",
-    a: "Yes. All data is hosted on Indian cloud infrastructure by default (AWS Mumbai or Hetzner India). Enterprise clients can opt for on-premise deployment if required.",
+    q: "Where is the data stored?",
+    a: "Data is hosted on the region closest to your team by default — Mumbai for South Asia, Dubai/Bahrain for the UAE, and Frankfurt or Amsterdam for European clients. Enterprise clients can opt for on-premise deployment if required.",
   },
   {
     q: "Does it handle variable pay, OT, and deductions?",
@@ -133,7 +133,7 @@ export default function PayrollPage() {
         eyebrow="PaySync · Payroll & Attendance"
         title={
           <>
-            Payroll that <span className="text-money">actually works</span> for Indian teams.
+            Payroll that <span className="text-money">actually works</span> for growing teams.
           </>
         }
         description="Built in Go + Next.js from the ground up. Biometric attendance, automated compliance, and direct bank payments — no spreadsheets, no month-end panic. Start free for 3 months, full support included."

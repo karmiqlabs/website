@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "KarmiqLabs is an India-based boutique specializing in cloud cost migration and legacy tech modernization. Senior engineers, fixed-scope pricing, zero downtime.",
+    "KarmiqLabs is a boutique specializing in cloud cost migration, legacy tech modernization, and payroll automation. Senior engineers, fixed-scope pricing, zero downtime.",
 };
 
 const values = [
   { icon: ShieldCheck, title: "Transparent pricing", body: "Fixed-scope contracts with a contingency buffer. No surprise invoices, ever." },
   { icon: Users, title: "Senior-only delivery", body: "You work with engineers who've shipped this before — not juniors with a process doc." },
   { icon: BadgeCheck, title: "Proof over promises", body: "We lead with real metrics: before/after costs, timelines, and outcomes." },
-  { icon: LineChart, title: "India-built, globally delivered", body: "World-class quality at a fraction of US/EU boutique rates." },
+  { icon: LineChart, title: "Built lean, delivered globally", body: "World-class quality at a fraction of US/EU boutique rates — serving clients across Asia, the Middle East, and Europe." },
 ];
 
 export default function AboutPage() {
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <span className="text-money">burn money</span>
           </>
         }
-        description="We're a small team of infrastructure and full-stack engineers based in India, focused on the two highest-impact moves a tech company can make."
+        description="We're a small team of infrastructure and full-stack engineers, focused on the three highest-impact moves a tech company can make — cloud migration, stack modernization, and payroll automation."
       />
 
       <Section>

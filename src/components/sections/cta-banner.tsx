@@ -27,7 +27,7 @@ export function CTABanner() {
               </Button>
             </div>
             <p className="mono mt-6 text-xs text-faint">
-              Replies within 24 hours · Based in India (IST), available for US/EU calls
+              Replies within 24 hours · Available for calls in IST, UAE &amp; EU time zones
             </p>
           </div>
         </div>

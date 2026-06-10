@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const details = [
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: Clock, label: "Response time", value: "Within 24 hours (Mon–Fri)" },
-  { icon: MapPin, label: "Based in", value: "India (IST) · available for US/EU calls" },
+  { icon: MapPin, label: "Availability", value: "IST · UAE · EU — available for calls globally" },
 ];
 
 export default function ContactPage() {

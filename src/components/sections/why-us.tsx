@@ -6,7 +6,7 @@ const stats = [
   { value: 90, suffix: "%", label: "typical cloud cost savings", tone: "money" },
   { value: 40, suffix: "%", label: "faster delivery via AI tooling", tone: "accent" },
   { value: 0, suffix: " min", label: "downtime — our core guarantee", tone: "money" },
-  { value: 3, suffix: "x", label: "India cost efficiency vs US/EU", tone: "accent" },
+  { value: 3, suffix: "x", label: "cost efficiency vs US/EU boutique rates", tone: "accent" },
 ] as const;
 
 export function WhyUs() {
@@ -17,7 +17,7 @@ export function WhyUs() {
           <SectionHeading
             eyebrow="Why boutique wins"
             title="Senior engineers. Not juniors with a process doc."
-            description="Large SIs (TCS, Wipro, Infosys) chase Fortune 500 contracts over $1M. They ignore the mid-market. We don't — and because we're India-based, you pay a fraction of what US/EU boutiques charge for the same quality."
+            description="Large SIs chase Fortune 500 contracts over $1M and ignore the mid-market. We don't — and we deliver senior-grade work at a fraction of what US/EU boutiques charge for the same quality."
           />
         </Reveal>
 

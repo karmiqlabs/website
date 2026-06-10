@@ -28,7 +28,7 @@ export function Hero() {
           >
             <Badge tone="accent">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Cloud · Legacy Modernization · Payroll &amp; HR Tech · India
+              Cloud · Legacy Modernization · Payroll &amp; HR Tech
             </Badge>
           </motion.div>
 
