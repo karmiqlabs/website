@@ -29,7 +29,7 @@ const services = [
     href: "/services/payroll",
     desc: "Full-stack payroll platform built in Go + Next.js. Biometric attendance via ESSL, automated compliance, and one-click bank payments.",
     points: ["ESSL biometric attendance sync", "Automated PF / ESI / TDS compliance", "Direct bank salary disbursement"],
-    price: "3 months free · then from ₹2,999/mo",
+    price: "",
   },
 ];
 
@@ -73,9 +73,11 @@ export function Services() {
                 ))}
               </ul>
 
-              <div className="mono mt-7 inline-flex items-center rounded-full border border-border bg-surface-2 px-3 py-1 text-sm text-fg">
-                {s.price}
-              </div>
+              {s.price && (
+                <div className="mono mt-7 inline-flex items-center rounded-full border border-border bg-surface-2 px-3 py-1 text-sm text-fg">
+                  {s.price}
+                </div>
+              )}
             </Link>
           </Reveal>
         ))}
